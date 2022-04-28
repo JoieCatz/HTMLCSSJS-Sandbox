@@ -1,0 +1,95 @@
+body {
+  font-family: sans-serif;
+  background-color: peachpuff;
+}
+
+.line {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  background-color: peru;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.flower {
+  width: 100px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50px;
+  margin-top: 35px;
+}
+
+.flower::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50px;
+  transform: rotate(-60deg);
+}
+.flower::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50px;
+  transform: rotate(60deg);
+}
+
+.heart {
+  width: 50px;
+  height: 50px;
+  background-color: crimson;
+  transform: rotate(45deg);
+}
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: crimson;
+}
+
+.heart::before {
+  left: -25px;
+}
+.heart::after {
+  top: -25px;
+}
+
+.hole {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: black;
+  position: absolute;
+  z-index: 1;
+}
+
+.pacman {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  border-radius: 50px;
+}
+
+.pacman-m {
+  width: 100px;
+  height: 100px;
+  background-color: peachpuff;
+  clip-path: polygon(100% 90%, 48% 48%, 100% 21%);
+}
